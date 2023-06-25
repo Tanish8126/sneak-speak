@@ -14,20 +14,8 @@ class SplashScreen extends GetView<SplashController> {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    return Container(
-      height: SizeConfig.screenHeight * 100,
-      width: double.infinity,
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(
-        colors: [kGradient1, kGradient2],
-        tileMode: TileMode.clamp,
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-      )),
-      child: const Scaffold(
-        backgroundColor: ktrans,
-        body: Body(),
-      ),
+    return const Scaffold(
+      body: Body(),
     );
   }
 }

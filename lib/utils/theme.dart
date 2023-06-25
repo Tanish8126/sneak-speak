@@ -4,7 +4,7 @@ import '../utils/constants/constants.dart';
 
 ThemeData theme() {
   return ThemeData(
-    scaffoldBackgroundColor: kWhite,
+    scaffoldBackgroundColor: kBlack,
     fontFamily: "Roboto",
     appBarTheme: appBarTheme(),
     textTheme: textTheme(),
@@ -37,7 +37,7 @@ TextTheme textTheme() {
 
 AppBarTheme appBarTheme() {
   return const AppBarTheme(
-      backgroundColor: kWhite,
+      backgroundColor: kBlack,
       elevation: 0,
       centerTitle: true,
       titleTextStyle: TextStyle(color: kWhite, fontSize: 18));

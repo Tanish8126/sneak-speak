@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         builder: (BuildContext context, Widget? child) {
           return GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Talent Skool',
+            title: 'Sneak Peak',
             theme: theme(),
             initialRoute: SplashScreen.routeName,
             routes: routes,
