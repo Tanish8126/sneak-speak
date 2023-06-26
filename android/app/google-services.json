@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "194305279564",
+    "project_id": "sneak-speak",
+    "storage_bucket": "sneak-speak.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194305279564:android:8b273818aa4f771e3b56e9",
+        "android_client_info": {
+          "package_name": "com.sneakspeak.userapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194305279564-qa6t8oejf4c5immmu7h91qp5fmidv47d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sneakspeak.userapp",
+            "certificate_hash": "8463437ec74fa3dda6f8c9452c08a2c9284ff053"
+          }
+        },
+        {
+          "client_id": "194305279564-bs6jbava4f2bqp2ssmvp38bp4likclvi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0BPuVo0E8r-6ghMt4YNKDykPtB1MLYAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194305279564-bs6jbava4f2bqp2ssmvp38bp4likclvi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
