@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../controller/auth_controller.dart';
-import '../../../../utils/constants/constants.dart';
 import 'components/body.dart';
 
 class OtpScreen extends StatelessWidget {
@@ -13,20 +12,8 @@ class OtpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-          appBar: AppBar(
-            leading: IconButton(
-              icon: Icon(Icons.arrow_back,
-                  size: getProportionateScreenHeight(40), color: kBlack),
-              onPressed: () {
-                authController.isOtpSent.value = false;
-                Get.back();
-              },
-            ),
-            backgroundColor: kWhite,
-          ),
-          body: const Body()),
+    return const SafeArea(
+      child: Scaffold(body: Body()),
     );
   }
 }

@@ -26,68 +26,55 @@ class _BodyState extends State<Body> {
       child: Padding(
         padding: pda(0.02),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          sh02,
-          Text("Login with Phone", style: tsBW(28, FontWeight.w700)),
           const Spacer(),
-          const Text("Phone Number"),
+          Text(
+            "Enter your number",
+            style: tsWW(24, FontWeight.bold),
+          ),
           sh02,
-          Obx(
-            () => Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                TextFormField(
-                  style: tsBW(18, FontWeight.bold),
-                  textAlign: TextAlign.start,
-                  controller: _controller,
-                  inputFormatters: [
-                    LengthLimitingTextInputFormatter(10),
-                  ],
-                  keyboardType: TextInputType.number,
-                  validator: (number) =>
-                      vPhoneValidator.hasMatch(number!) ? null : fPhoneNumber,
-                  onChanged: (val) {
-                    _authController.phoneNo.value = val;
-                  },
-                  onSaved: (val) => _authController.phoneNo.value = val!,
-                  decoration: InputDecoration(
-                    contentPadding: pda(0.03),
-                    // focusedBorder: oi32(kMainColor),
-                    // enabledBorder: oi32(kMainColor),
-                    // errorBorder: oi32(kMainColor),
-                    // focusedErrorBorder: oi32(kMainColor),
-                    fillColor: kBlack,
-                    errorMaxLines: 2,
-                    errorStyle: tsB(12),
-                    floatingLabelAlignment: FloatingLabelAlignment.start,
-
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    prefix: _authController.showPrefix.value
-                        ? Padding(
-                            padding: pds(0.01, 0),
-                            child: Text('+91', style: tsB(18)),
-                          )
-                        : null,
-                    hintText: "Enter your Mobile Number",
-                    hintStyle: tsB(16),
-                  ),
+          TextFormField(
+            style: tsPW(26, FontWeight.bold),
+            textAlign: TextAlign.start,
+            controller: _controller,
+            inputFormatters: [
+              LengthLimitingTextInputFormatter(10),
+            ],
+            keyboardType: TextInputType.number,
+            validator: (number) =>
+                vPhoneValidator.hasMatch(number!) ? null : fPhoneNumber,
+            onChanged: (val) {
+              _authController.phoneNo.value = val;
+            },
+            onSaved: (val) => _authController.phoneNo.value = val!,
+            decoration: InputDecoration(
+              focusedBorder: InputBorder.none,
+              enabledBorder: InputBorder.none,
+              errorBorder: InputBorder.none,
+              focusedErrorBorder: InputBorder.none,
+              fillColor: kBlack,
+              errorMaxLines: 2,
+              errorStyle: tsB(12),
+              floatingLabelAlignment: FloatingLabelAlignment.start,
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              prefixIcon: SizedBox(
+                width: getProportionateScreenWidth(70),
+                child: Container(
+                  alignment: Alignment.center,
+                  decoration: const BoxDecoration(color: Color(0xFF949494)),
+                  child: Text('IND', style: tsWW(18, FontWeight.bold)),
                 ),
-                sh02,
-                Text("We will send an otp to this number. ", style: tsB(16)),
-                sh03,
-                TextButton(
-                    onPressed: () {},
-                    child: const Text("Go back to Google Signin")),
-              ],
+              ),
+              hintText: "3333-333-333",
+              hintStyle: tsCommonW(26, kButton),
             ),
           ),
-          const Spacer(),
+          sh05,
           DefaultButton(
-            text: "Get Otp",
+            text: "Continue",
             press: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
-                _authController.getOtp(context);
+                //  _authController.getOtp(context);
                 Get.toNamed(OtpScreen.routeName);
               }
             },

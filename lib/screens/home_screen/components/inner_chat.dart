@@ -19,9 +19,9 @@ class InnerChat extends StatelessWidget {
         children: [
           Row(
             children: [
-              CircleAvatar(
-                child: Image.asset("assets/images/logo.png"),
-              ),
+              // CircleAvatar(
+              //   child: Image.asset("assets/images/logo.png"),
+              // ),
               sw03,
               Text(
                 "Fasil Mohamed",

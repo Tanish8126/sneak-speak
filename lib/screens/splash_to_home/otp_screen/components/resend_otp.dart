@@ -11,16 +11,13 @@ class ResendOtp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Row(
       children: [
         Text(
-          "Didn't recieve the code?",
-          style: tsB(18),
+          "Didn't get OTP?",
+          style: tsW(16),
         ),
-        sw01,
         Obx(() => TextButton(
-            // style: tb,
             onPressed: () => authController.resendOTP.value
                 ? authController.resendOtp()
                 : null,
@@ -28,7 +25,7 @@ class ResendOtp extends StatelessWidget {
               authController.resendOTP.value
                   ? "Resend OTP"
                   : "Wait ${authController.resendAfter} seconds",
-              style: tsB(16),
+              style: tsCommon(16, kGreen),
             )))
       ],
     );

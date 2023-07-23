@@ -24,7 +24,6 @@ class _MainScreenState extends State<MainScreen> {
     HomeScreen(),
     NetworkScreen(),
     EventsScreen(),
-    ProfileScreen(),
     ProfileScreen()
   ];
 
@@ -41,55 +40,43 @@ class _MainScreenState extends State<MainScreen> {
         type: BottomNavigationBarType.fixed,
         selectedItemColor: kPrimary,
         unselectedItemColor: kInactive,
-        backgroundColor: kWhite,
+        backgroundColor: kBlack.withOpacity(0.7),
         showSelectedLabels: true,
         showUnselectedLabels: true,
-        elevation: 0,
+        elevation: 5,
         unselectedFontSize: getProportionateScreenHeight(18),
         selectedFontSize: getProportionateScreenHeight(18),
         onTap: onPageChange,
         currentIndex: _page,
         items: [
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              "assets/icons/home.svg",
-              color: _page == 0 ? kPrimary : kBlack.withOpacity(0.5),
-              height: getProportionateScreenHeight(26),
-            ),
-            label: 'Home',
-          ),
+              icon: SvgPicture.asset(
+                "assets/icons/home.svg",
+                color: _page == 0 ? kWhite : kBlack.withOpacity(0.5),
+                height: getProportionateScreenHeight(26),
+              ),
+              label: "Hello"),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              "assets/icons/share.svg",
-              color: _page == 1 ? kPrimary : kBlack.withOpacity(0.5),
-              height: getProportionateScreenHeight(26),
-            ),
-            label: 'Network',
-          ),
+              icon: SvgPicture.asset(
+                "assets/icons/people.svg",
+                color: _page == 1 ? kWhite : kBlack.withOpacity(0.1),
+                height: getProportionateScreenHeight(26),
+              ),
+              label: "Hello"),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              "assets/icons/share.svg",
-              color: _page == 2 ? kPrimary : kBlack.withOpacity(0.5),
-              height: getProportionateScreenHeight(26),
-            ),
-            label: 'Talent',
-          ),
+              icon: SvgPicture.asset(
+                "assets/icons/message.svg",
+                color: _page == 2 ? kWhite : kBlack.withOpacity(0.5),
+                height: getProportionateScreenHeight(26),
+              ),
+              label: "Hello"),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              "assets/icons/calendar.svg",
-              color: _page == 3 ? kPrimary : kBlack.withOpacity(0.5),
-              height: getProportionateScreenHeight(26),
-            ),
-            label: 'Events',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              "assets/icons/profile.svg",
-              color: _page == 4 ? kPrimary : kBlack.withOpacity(0.5),
-              height: getProportionateScreenHeight(26),
-            ),
-            label: 'Profile',
-          ),
+              icon: SvgPicture.asset(
+                "assets/icons/profile.svg",
+                color: _page == 3 ? kWhite : kBlack.withOpacity(0.5),
+                height: getProportionateScreenHeight(26),
+              ),
+              label: "Hello"),
         ],
       ),
       body: pages[_page],

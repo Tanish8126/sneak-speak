@@ -17,18 +17,47 @@ class Body extends StatelessWidget {
             topLeft: Radius.circular(20), topRight: Radius.circular(20)),
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          TextButton(onPressed: () {}, child: Text("Edit")),
+          sh01,
           Text(
             "Rahul Gupta",
             style: tsBW(22, FontWeight.w500),
           ),
           sh02,
-          FilledButton.icon(
-            onPressed: () {},
-            label: const Text("Complete Profile"),
-            icon: const Icon(Icons.arrow_forward),
+          Text(
+            "Anonymity grants me the power to delve into genuine conversations",
+            style: tsB(16),
           ),
-          sh01,
+          sh02,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Row(
+                children: const [
+                  Icon(Icons.add_circle_outline_sharp),
+                  Text("Nims")
+                ],
+              ),
+              Row(
+                children: const [
+                  Icon(Icons.add_circle_outline_sharp),
+                  Text("Nims")
+                ],
+              ),
+              Row(
+                children: const [
+                  Icon(Icons.add_circle_outline_sharp),
+                  Text("Nims")
+                ],
+              )
+            ],
+          ),
+          sh02,
+          Row(
+            children: const [Text("20 Followers"), Text("20 Followers")],
+          ),
           Divider(color: kBlack.withOpacity(0.3)),
           sh02,
           const Skills(),

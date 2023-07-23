@@ -8,19 +8,20 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: pda(0.02),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            sh02,
-            Text("Enter The OTP", style: tsBW(28, FontWeight.w700)),
-            sh03,
-            OtpInput(),
-          ],
-        ),
+    return Padding(
+      padding: pds(0.02, 0.05),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          sh02,
+          Text(
+            "Enter The OTP",
+            style: tsWW(24, FontWeight.bold),
+          ),
+          sh01,
+          OtpInput(),
+        ],
       ),
     );
   }

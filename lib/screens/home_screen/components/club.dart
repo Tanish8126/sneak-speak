@@ -24,10 +24,10 @@ class Club extends StatelessWidget {
                   offset: const Offset(0, 5)),
             ],
           ),
-          child: CircleAvatar(
-            radius: getProportionateScreenHeight(32),
-            child: Image.asset("assets/images/logo.png"),
-          ),
+          // child: CircleAvatar(
+          //   radius: getProportionateScreenHeight(32),
+          //   child: Image.asset("assets/images/logo.png"),
+          // ),
         ),
         sh01,
         Text(

@@ -1,4 +1,6 @@
+import 'package:dating_app/screens/main_screen/main_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:pinput/pinput.dart';
 
@@ -15,28 +17,34 @@ class OtpInput extends StatelessWidget {
   final TextEditingController _pinPutController = TextEditingController();
 
   final defaultPinTheme = PinTheme(
-      width: getProportionateScreenHeight(60),
+      width: getProportionateScreenHeight(20),
       height: getProportionateScreenWidth(60),
-      textStyle: tsB(20),
-      decoration: BoxDecoration(
-        color: kBlack.withOpacity(0.2),
-        borderRadius: const BorderRadius.all(Radius.circular(10)),
-      ));
+      textStyle: tsPW(26, FontWeight.bold));
 
   @override
   Widget build(BuildContext context) {
     return Form(
       key: _formKey,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'OTP sent to your mobile number.\n +91-${authController.phoneNo}',
-            style: tsBW(18, FontWeight.w700),
-            textAlign: TextAlign.center,
+          Row(
+            children: [
+              Text(
+                '(${authController.phoneNo})',
+                style: tsWW(18, FontWeight.w700),
+              ),
+              IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset("assets/icons/pen.svg"))
+            ],
           ),
           sh02,
           Pinput(
+            preFilledWidget: Text(
+              "3",
+              style: tsCommonW(26, kButton),
+            ),
             length: 6,
             defaultPinTheme: defaultPinTheme,
             focusedPinTheme: defaultPinTheme,
@@ -50,21 +58,21 @@ class OtpInput extends StatelessWidget {
               return null;
             },
           ),
+          ResendOtp(),
           sh05,
           DefaultButton(
-            text: 'Verify',
+            text: 'Continue',
             size: 18,
             press: () {
               if (_formKey.currentState!.validate()) {
                 authController.otp.value = _pinPutController.text;
-                authController.verifyOTP();
+                //   authController.verifyOTP();
+                Get.toNamed(MainScreen.routeName);
               } else {
                 showSnackBar(context, "Enter 6-Digit Otp");
               }
             },
           ),
-          sh03,
-          ResendOtp()
         ],
       ),
     );

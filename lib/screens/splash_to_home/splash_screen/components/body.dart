@@ -1,24 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../../utils/constants/constants.dart';
+import '../../../../utils/default_button.dart';
+import '../../phone_auth_screen/phone_auth_screen.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Padding(
+      padding: pds(0.02, 0.1),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          SizedBox(
-              width: SizeConfig.screenWidth * 0.7,
-              child: Image.asset("assets/images/logo.png")),
-          // sh03,
+          SizedBox(child: Image.asset("assets/images/lock.png")),
           Text(
-            "Talent Skool",
-            style: tsWW(40, FontWeight.bold),
-          )
+            "SneakSpeak",
+            style: tsWW(26, FontWeight.bold),
+          ),
+          sh02,
+          Text(
+            "because we all know you can't resist it",
+            style: tsCommon(16, kGreen),
+          ),
+          sh07,
+          DefaultButton(
+            text: "Continue",
+            press: () {
+              Get.toNamed(PhoneAuthScreen.routeName);
+            },
+            size: 18,
+          ),
         ],
       ),
     );

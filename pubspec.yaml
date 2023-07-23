@@ -11,12 +11,20 @@ dependencies:
   firebase_app_check: ^0.1.4+3
   firebase_auth: ^4.6.3
   firebase_core: ^2.14.0
+  firebase_storage: ^11.2.4
   flutter:
     sdk: flutter
+  flutter_local_notifications: ^15.1.0+1
   flutter_screenutil: ^5.7.0
   flutter_svg: ^2.0.5
+  fluttertoast: ^8.2.2
   get: ^4.6.5
+  http: ^0.13.6
+  image_picker: ^1.0.1
+  permission_handler: ^10.4.2
   pinput: ^2.2.31
+  provider: ^6.0.5
+  shimmer: ^3.0.0
   url_launcher: ^6.1.11
 
 dev_dependencies:
@@ -26,3 +34,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+   - assets/images/
+   - assets/icons/

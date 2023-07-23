@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -18,17 +20,18 @@ class Body extends StatelessWidget {
           children: [
             TextFormField(
               decoration: InputDecoration(
-                  label: const Text("Search name, location"),
-                  focusedBorder: oi15(kBlack.withOpacity(0.3)),
-                  enabledBorder: oi15(kBlack.withOpacity(0.3)),
-                  errorBorder: oi15(kRed.withOpacity(0.3)),
-                  focusedErrorBorder: oi15(kRed.withOpacity(0.3)),
-                  prefixIcon: SvgPicture.asset(
-                    "assets/icons/search.svg",
-                    height: getProportionateScreenHeight(20),
-                    width: getProportionateScreenWidth(20),
-                    color: kBlack.withOpacity(0.3),
-                  )),
+                label: const Text("Search name, location"),
+                focusedBorder: oi15(kBlack.withOpacity(0.3)),
+                enabledBorder: oi15(kBlack.withOpacity(0.3)),
+                errorBorder: oi15(kRed.withOpacity(0.3)),
+                focusedErrorBorder: oi15(kRed.withOpacity(0.3)),
+                // prefixIcon: SvgPicture.asset(
+                //   "assets/icons/search.svg",
+                //   height: getProportionateScreenHeight(20),
+                //   width: getProportionateScreenWidth(20),
+                //   color: kBlack.withOpacity(0.3),
+                // )
+              ),
             ),
             sh02,
             SingleChildScrollView(

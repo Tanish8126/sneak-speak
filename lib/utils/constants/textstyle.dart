@@ -10,20 +10,27 @@ TextStyle tsCommon(double size, color) {
       fontSize: getProportionateScreenHeight(size));
 }
 
-//PrimaryColor
-TextStyle tsP(double size) {
+TextStyle tsCommonW(double size, color) {
   return TextStyle(
-      color: kPrimary,
-      fontWeight: FontWeight.normal,
+      color: color,
+      fontWeight: FontWeight.bold,
       fontSize: getProportionateScreenHeight(size));
 }
 
-TextStyle tsPW(double size, weight) {
-  return TextStyle(
-      fontSize: getProportionateScreenHeight(size),
-      fontWeight: weight,
-      color: kPrimary);
-}
+// //PrimaryColor
+// TextStyle tsP(double size) {
+//   return TextStyle(
+//       color: kPrimary,
+//       fontWeight: FontWeight.normal,
+//       fontSize: getProportionateScreenHeight(size));
+// }
+
+// TextStyle tsPW(double size, weight) {
+//   return TextStyle(
+//       fontSize: getProportionateScreenHeight(size),
+//       fontWeight: weight,
+//       color: kPrimary);
+// }
 
 //Black
 TextStyle tsB(double size) {
@@ -69,6 +76,13 @@ TextStyle tsW(double size) {
 TextStyle tsWW(double size, weight) {
   return TextStyle(
       color: kWhite,
+      fontSize: getProportionateScreenHeight(size),
+      fontWeight: weight);
+}
+
+TextStyle tsPW(double size, weight) {
+  return TextStyle(
+      color: kPink,
       fontSize: getProportionateScreenHeight(size),
       fontWeight: weight);
 }
