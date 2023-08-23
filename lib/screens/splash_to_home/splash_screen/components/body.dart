@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../../../../../utils/constants/constants.dart';
 import '../../../../utils/default_button.dart';
+import '../../../main_screen/main_screen.dart';
 import '../../phone_auth_screen/phone_auth_screen.dart';
 
 class Body extends StatelessWidget {
@@ -30,7 +31,7 @@ class Body extends StatelessWidget {
           DefaultButton(
             text: "Continue",
             press: () {
-              Get.toNamed(PhoneAuthScreen.routeName);
+              Get.toNamed(MainScreen.routeName);
             },
             size: 18,
           ),

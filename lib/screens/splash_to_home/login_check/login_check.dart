@@ -1,8 +1,8 @@
-import 'package:dating_app/screens/splash_to_home/phone_auth_screen/phone_auth_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../../main_screen/main_screen.dart';
+import '../phone_auth_screen/phone_auth_screen.dart';
 
 class LoginCheck extends StatelessWidget {
   const LoginCheck({Key? key}) : super(key: key);

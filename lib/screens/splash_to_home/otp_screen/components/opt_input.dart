@@ -1,4 +1,3 @@
-import 'package:dating_app/screens/main_screen/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -8,6 +7,7 @@ import '../../../../../controller/auth_controller.dart';
 import '../../../../../utils/constants/constants.dart';
 import '../../../../../utils/snackbar.dart';
 import '../../../../utils/default_button.dart';
+import '../../../main_screen/main_screen.dart';
 import 'resend_otp.dart';
 
 class OtpInput extends StatelessWidget {

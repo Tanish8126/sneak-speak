@@ -8,6 +8,7 @@ ThemeData theme() {
     fontFamily: "Roboto",
     appBarTheme: appBarTheme(),
     textTheme: textTheme(),
+    iconTheme: iconTheme(),
     inputDecorationTheme: inputDecorationTheme(),
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
@@ -29,10 +30,14 @@ InputDecorationTheme inputDecorationTheme() {
 
 TextTheme textTheme() {
   return const TextTheme(
-    titleMedium: TextStyle(color: kBlack),
-    bodyLarge: TextStyle(color: kBlack),
-    bodyMedium: TextStyle(color: kBlack),
+    titleMedium: TextStyle(color: kWhite),
+    bodyLarge: TextStyle(color: kWhite),
+    bodyMedium: TextStyle(color: kWhite),
   );
+}
+
+IconThemeData iconTheme() {
+  return const IconThemeData(color: kWhite);
 }
 
 AppBarTheme appBarTheme() {

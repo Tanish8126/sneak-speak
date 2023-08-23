@@ -40,7 +40,7 @@ class _MainScreenState extends State<MainScreen> {
         type: BottomNavigationBarType.fixed,
         selectedItemColor: kPrimary,
         unselectedItemColor: kInactive,
-        backgroundColor: kBlack.withOpacity(0.7),
+        backgroundColor: kBlack.withOpacity(0.4),
         showSelectedLabels: true,
         showUnselectedLabels: true,
         elevation: 5,
@@ -55,28 +55,28 @@ class _MainScreenState extends State<MainScreen> {
                 color: _page == 0 ? kWhite : kBlack.withOpacity(0.5),
                 height: getProportionateScreenHeight(26),
               ),
-              label: "Hello"),
+              label: ""),
           BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 "assets/icons/people.svg",
                 color: _page == 1 ? kWhite : kBlack.withOpacity(0.1),
                 height: getProportionateScreenHeight(26),
               ),
-              label: "Hello"),
+              label: ""),
           BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 "assets/icons/message.svg",
-                color: _page == 2 ? kWhite : kBlack.withOpacity(0.5),
+                color: _page == 2 ? kWhite : kBlack.withOpacity(0.1),
                 height: getProportionateScreenHeight(26),
               ),
-              label: "Hello"),
+              label: ""),
           BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 "assets/icons/profile.svg",
-                color: _page == 3 ? kWhite : kBlack.withOpacity(0.5),
+                color: _page == 3 ? kWhite : kBlack.withOpacity(0.1),
                 height: getProportionateScreenHeight(26),
               ),
-              label: "Hello"),
+              label: ""),
         ],
       ),
       body: pages[_page],

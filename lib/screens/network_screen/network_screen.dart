@@ -1,10 +1,8 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sneak_speak/screens/widget.network/alien_network/alien_network.dart';
+import 'package:sneak_speak/screens/widget.network/native_network/native_network.dart';
 
 import '../../utils/constants/constants.dart';
-import 'components/body.dart';
 
 class NetworkScreen extends StatelessWidget {
   static String routeName = './network_screen';
@@ -12,51 +10,23 @@ class NetworkScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          centerTitle: false,
-          leadingWidth: 0,
-          title: Text(
-            "TalentSkool",
-            style: tsBW(26, FontWeight.bold),
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+          appBar: AppBar(
+            automaticallyImplyLeading: false,
+            bottom: const TabBar(
+                indicatorWeight: 3,
+                indicatorColor: kWhite,
+                labelColor: kWhite,
+                tabs: [
+                  Tab(
+                    text: "Native",
+                  ),
+                  Tab(text: "Alien"),
+                ]),
           ),
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                "assets/icons/calendar.svg",
-                color: kBlack,
-                height: getProportionateScreenHeight(36),
-              ),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                "assets/icons/addsquare.svg",
-                color: kBlack,
-                height: getProportionateScreenHeight(36),
-              ),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                "assets/icons/notification.svg",
-                color: kBlack,
-                height: getProportionateScreenHeight(36),
-              ),
-            )
-          ],
-        ),
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: kPrimary,
-          onPressed: () {},
-          child: SvgPicture.asset(
-            "assets/icons/message.svg",
-            color: kWhite,
-            height: getProportionateScreenHeight(36),
-          ),
-        ),
-        body: const Body());
+          body: const TabBarView(children: [NativeNetwork(), AlienNetwork()])),
+    );
   }
 }

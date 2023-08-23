@@ -12,9 +12,8 @@ import '../screens/splash_to_home/otp_screen/otp_screen.dart';
 import '../screens/splash_to_home/phone_auth_screen/phone_auth_screen.dart';
 import '../screens/splash_to_home/signup_form_screen/signup_form_screen.dart';
 import '../screens/splash_to_home/splash_screen/splash_screen.dart';
-import '../screens/widget.events/my_events/my_events.dart';
-import '../screens/widget.events/past_events/past_events.dart';
-import '../screens/widget.events/upcoming_events/upcoming_events.dart';
+import '../screens/widget.home/alien_home/alien_home.dart';
+import '../screens/widget.home/native_home/native_part.dart';
 
 // We use name route
 // All our routes will be available here
@@ -26,12 +25,11 @@ final Map<String, WidgetBuilder> routes = {
   SignupFormScreen.routeName: (context) => const SignupFormScreen(),
   MainScreen.routeName: (context) => const MainScreen(),
   HomeScreen.routeName: (context) => const HomeScreen(),
+  AlienHome.routeName: (context) => const AlienHome(),
+  NativeHome.roteName: (context) => const NativeHome(),
   NetworkScreen.routeName: (context) => const NetworkScreen(),
   EventsScreen.routeName: (context) => const EventsScreen(),
   MessageScreen.routeName: (context) => const MessageScreen(),
   ProfileScreen.routeName: (context) => const ProfileScreen(),
-  UpcomingEvents.routeName: (context) => const UpcomingEvents(),
-  MyEvents.roteName: (context) => const MyEvents(),
-  PastEvents.routeName: (context) => const PastEvents(),
   CompleteProfile.routeName: (context) => const CompleteProfile(),
 };
