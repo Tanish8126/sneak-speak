@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../utils/constants/constants.dart';
@@ -40,41 +41,49 @@ class _MainScreenState extends State<MainScreen> {
         type: BottomNavigationBarType.fixed,
         selectedItemColor: kPrimary,
         unselectedItemColor: kInactive,
-        backgroundColor: kBlack.withOpacity(0.4),
+        backgroundColor: const Color(0xFF383838),
         showSelectedLabels: true,
         showUnselectedLabels: true,
         elevation: 5,
-        unselectedFontSize: getProportionateScreenHeight(18),
-        selectedFontSize: getProportionateScreenHeight(18),
+        unselectedFontSize: 0,
+        selectedFontSize: 0,
         onTap: onPageChange,
         currentIndex: _page,
         items: [
           BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 "assets/icons/home.svg",
-                color: _page == 0 ? kWhite : kBlack.withOpacity(0.5),
-                height: getProportionateScreenHeight(26),
+                color: _page == 0
+                    ? kWhite
+                    : const Color.fromARGB(255, 110, 108, 108),
+                height: 30.h,
               ),
               label: ""),
           BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 "assets/icons/people.svg",
-                color: _page == 1 ? kWhite : kBlack.withOpacity(0.1),
-                height: getProportionateScreenHeight(26),
+                color: _page == 1
+                    ? kWhite
+                    : const Color.fromARGB(255, 110, 108, 108),
+                height: 30.h,
               ),
               label: ""),
           BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 "assets/icons/message.svg",
-                color: _page == 2 ? kWhite : kBlack.withOpacity(0.1),
-                height: getProportionateScreenHeight(26),
+                color: _page == 2
+                    ? kWhite
+                    : const Color.fromARGB(255, 110, 108, 108),
+                height: 30.h,
               ),
               label: ""),
           BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 "assets/icons/profile.svg",
-                color: _page == 3 ? kWhite : kBlack.withOpacity(0.1),
-                height: getProportionateScreenHeight(26),
+                color: _page == 3
+                    ? kWhite
+                    : const Color.fromARGB(255, 110, 108, 108),
+                height: 30.h,
               ),
               label: ""),
         ],

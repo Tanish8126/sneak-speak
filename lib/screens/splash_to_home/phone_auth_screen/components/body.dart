@@ -65,7 +65,7 @@ class _BodyState extends State<Body> {
                 ),
               ),
               hintText: "3333-333-333",
-              hintStyle: tsCommonW(26, kButton),
+              hintStyle: tsCommonW(26, FontWeight.bold, kButton),
             ),
           ),
           sh05,

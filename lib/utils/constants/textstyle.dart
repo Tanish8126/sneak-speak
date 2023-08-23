@@ -10,10 +10,10 @@ TextStyle tsCommon(double size, color) {
       fontSize: getProportionateScreenHeight(size));
 }
 
-TextStyle tsCommonW(double size, color) {
+TextStyle tsCommonW(double size, fontweight, color) {
   return TextStyle(
       color: color,
-      fontWeight: FontWeight.bold,
+      fontWeight: fontweight,
       fontSize: getProportionateScreenHeight(size));
 }
 

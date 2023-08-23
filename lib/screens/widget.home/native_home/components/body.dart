@@ -5,7 +5,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../utils/constants/constants.dart';
 
 class NativeBody extends StatelessWidget {
-  const NativeBody({super.key});
+  const NativeBody({super.key, required this.tweet});
+  final String tweet;
 
   @override
   Widget build(BuildContext context) {
@@ -21,26 +22,30 @@ class NativeBody extends StatelessWidget {
           children: [
             Text(
               "Firefighter",
-              style: tsWW(16, FontWeight.bold),
+              style: tsWW(15, FontWeight.w700),
             ),
             sw07,
             TextButton.icon(
                 onPressed: () {},
-                icon: SvgPicture.asset("assets/icons/gps.svg"),
+                icon: SvgPicture.asset(
+                  "assets/icons/gps.svg",
+                  height: 16.h,
+                  color: const Color(0xFFD9FFBB),
+                ),
                 label: Text(
-                  "1.4k",
-                  style: tsWW(12, FontWeight.bold),
+                  "Nmims",
+                  style:
+                      tsCommonW(15, FontWeight.w700, const Color(0xFFD9FFBB)),
                 )),
           ],
         ),
         Text(
-          "In the corridors of Ridgeview College, whispers spread like wildfire. From scandalous love affairs to clandestine alliances, the gossip mill churned ceaselessly. Friends turned foes, secrets unveiled, and reputations shattered. Amidst the chaos, the power of words held sway, forever altering the course of friendships and shaping the college's social landscape.",
-          style: tsWW(14, FontWeight.bold),
+          tweet,
+          style: tsCommonW(15, FontWeight.w500, const Color(0xFF949494)),
           textAlign: TextAlign.left,
         ),
         sh04,
         Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             TextButton.icon(

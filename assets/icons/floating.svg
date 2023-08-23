@@ -1,0 +1,13 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="vuesax/bold/text-block">
+<g id="text-block">
+<path id="Vector" d="M40.475 5H19.525C10.425 5 5 10.425 5 19.525V40.45C5 49.575 10.425 55 19.525 55H40.45C49.55 55 54.975 49.575 54.975 40.475V19.525C55 10.425 49.575 5 40.475 5ZM44.175 23.05C43.7 23.975 42.6 24.35 41.65 23.9C38.575 22.35 35.25 21.5 31.875 21.25V40.725C31.875 41.75 31.025 42.6 30 42.6C28.975 42.6 28.125 41.75 28.125 40.725V21.25C24.75 21.5 21.425 22.35 18.35 23.9C18.075 24.025 17.775 24.075 17.5 24.075C16.825 24.075 16.15 23.7 15.825 23.05C15.35 22.125 15.725 21 16.65 20.525C25 16.35 34.975 16.35 43.325 20.525C44.275 21 44.65 22.125 44.175 23.05Z" fill="url(#paint0_linear_605_3443)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_605_3443" x1="29.9875" y1="5" x2="29.9875" y2="55" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.25"/>
+<stop offset="1" stop-color="white" stop-opacity="0.24"/>
+</linearGradient>
+</defs>
+</svg>

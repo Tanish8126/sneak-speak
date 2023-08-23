@@ -43,7 +43,7 @@ class OtpInput extends StatelessWidget {
           Pinput(
             preFilledWidget: Text(
               "3",
-              style: tsCommonW(26, kButton),
+              style: tsCommonW(26, FontWeight.bold, kButton),
             ),
             length: 6,
             defaultPinTheme: defaultPinTheme,
