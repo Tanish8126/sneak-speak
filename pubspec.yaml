@@ -17,9 +17,8 @@ dependencies:
   flutter_local_notifications: ^15.1.0+1
   flutter_screenutil: ^5.7.0
   flutter_svg: ^2.0.5
-  fluttertoast: ^8.2.2
   get: ^4.6.5
-  http: ^0.13.6
+  http: ^1.1.0
   image_picker: ^1.0.1
   permission_handler: ^10.4.2
   pinput: ^3.0.0

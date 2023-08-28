@@ -8,9 +8,9 @@ class AlienNetwork extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
       child: Column(
-        children: const [Body(), Body(), Body(), Body()],
+        children: [Body(), Body(), Body(), Body()],
       ),
     );
   }

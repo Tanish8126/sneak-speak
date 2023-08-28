@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import '../../../../../utils/constants/constants.dart';
 import '../../../../utils/default_button.dart';
 import '../../../main_screen/main_screen.dart';
-import '../../phone_auth_screen/phone_auth_screen.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
