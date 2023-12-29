@@ -20,8 +20,8 @@ class HomeScreen extends StatelessWidget {
             automaticallyImplyLeading: false,
             bottom: TabBar(
                 indicatorWeight: 2,
-                //   indicatorPadding: pdo(0, 0, 0.02, 0),
                 indicatorColor: kWhite,
+                indicatorSize: TabBarIndicatorSize.tab,
                 unselectedLabelStyle:
                     tsCommonW(16, FontWeight.w700, const Color(0xFF272727)),
                 labelStyle: tsWW(16, FontWeight.w700),

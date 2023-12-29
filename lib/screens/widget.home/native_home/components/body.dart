@@ -3,12 +3,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../../../../utils/constants/constants.dart';
 
 class NativeBody extends StatelessWidget {
   const NativeBody({super.key, required this.tweet});
   final String tweet;
+
+  shareText() {
+    Share.share(tweet);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,6 +57,7 @@ class NativeBody extends StatelessWidget {
           children: [
             TextButton.icon(
                 onPressed: () {},
+                onFocusChange: (value) {},
                 icon: SvgPicture.asset("assets/icons/flash.svg"),
                 label: Text(
                   "1.4k",
@@ -65,7 +71,9 @@ class NativeBody extends StatelessWidget {
                   style: tsWW(12, FontWeight.bold),
                 )),
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  shareText();
+                },
                 icon: SvgPicture.asset("assets/icons/send-2.svg")),
             IconButton(
                 onPressed: () {},

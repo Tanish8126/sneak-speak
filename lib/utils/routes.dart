@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sneak_speak/screens/profile_screen/components/editprofile_screen.dart';
+import 'package:sneak_speak/screens/profile_screen/components/followers_screen.dart';
+import 'package:sneak_speak/screens/widget.profile/followers/followers.dart';
+import 'package:sneak_speak/screens/widget.profile/following/following.dart';
 
 import '../screens/complete_profile/complete_profile.dart';
 import '../screens/events_screen/events_screen.dart';
@@ -31,5 +35,9 @@ final Map<String, WidgetBuilder> routes = {
   EventsScreen.routeName: (context) => const EventsScreen(),
   MessageScreen.routeName: (context) => const MessageScreen(),
   ProfileScreen.routeName: (context) => const ProfileScreen(),
+  EditProfileScreen.routeName: (context) => const EditProfileScreen(),
+  FollowersScreen.routeName: (context) => const FollowersScreen(),
+  Followers.roteName: (context) => const Followers(),
+  Following.roteName: (context) => const Following(),
   CompleteProfile.routeName: (context) => const CompleteProfile(),
 };

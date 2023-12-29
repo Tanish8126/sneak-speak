@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sneak_speak/screens/events_screen/body.dart';
 
 import '../../utils/constants/constants.dart';
 
@@ -11,21 +12,22 @@ class EventsScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
           appBar: AppBar(
-            leading: Container(),
-            centerTitle: false,
-            leadingWidth: 0,
-            title: Text(
-              "Events",
-              style: tsWW(26, FontWeight.bold),
-            ),
-            actions: [
-              IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.notification_add)),
-              IconButton(onPressed: () {}, icon: const Icon(Icons.message))
-            ],
+            automaticallyImplyLeading: false,
           ),
           backgroundColor: kBlack,
-          body: Container()),
+          body: Padding(
+              padding: pda(0.02),
+              child: Column(
+                children: [
+                  const Body(),
+                  sh02,
+                  const Body(),
+                  sh02,
+                  const Body(),
+                  sh02,
+                  const Body(),
+                ],
+              ))),
     );
   }
 }

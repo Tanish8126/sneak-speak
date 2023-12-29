@@ -16,7 +16,8 @@ class NetworkScreen extends StatelessWidget {
           appBar: AppBar(
             automaticallyImplyLeading: false,
             bottom: const TabBar(
-                indicatorWeight: 3,
+                indicatorWeight: 2,
+                indicatorSize: TabBarIndicatorSize.tab,
                 indicatorColor: kWhite,
                 labelColor: kWhite,
                 tabs: [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../utils/constants/constants.dart';
 import '../../widget.home/native_home/components/body.dart';
@@ -12,7 +13,32 @@ class Body extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          Image.asset("assets/images/bg_image.png"),
+          Stack(
+            alignment: Alignment.bottomLeft,
+            children: [
+              Padding(
+                padding: pdo(0, 0.035, 0, 0),
+                child: AspectRatio(
+                  aspectRatio: 3,
+                  child: Image.asset("assets/images/bg_image.png"),
+                ),
+              ),
+              Padding(
+                padding: pdo(0, 0, 0.03, 0),
+                child: GestureDetector(
+                  onTap: () {
+                    _showSimpleDialog(context);
+                  },
+                  child: CircleAvatar(
+                    backgroundImage:
+                        const AssetImage("assets/images/profile.png"),
+                    backgroundColor: Colors.grey[800],
+                    radius: 30.r,
+                  ),
+                ),
+              ),
+            ],
+          ),
           const Info(),
           Divider(color: kWhite.withOpacity(0.4)),
           const NativeBody(
@@ -21,5 +47,41 @@ class Body extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future<void> _showSimpleDialog(context) async {
+    await showDialog<void>(
+        context: context,
+        barrierColor: ktrans,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            backgroundColor: ktrans,
+            insetPadding: pda(0.0),
+            contentPadding: pda(0.0),
+            content: Stack(
+              clipBehavior: Clip.none,
+              alignment: Alignment.bottomCenter,
+              children: [
+                CircleAvatar(
+                  backgroundImage:
+                      const AssetImage("assets/images/profile.png"),
+                  backgroundColor: Colors.grey[800],
+                  radius: 50.r,
+                ),
+                Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(6),
+                        gradient: const LinearGradient(
+                            colors: [Color(0x19ffffff), Color(0x19d9d9d9)],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter)),
+                    child: Text(
+                      'Cancel',
+                      style: tsWW(12, FontWeight.w600),
+                    )),
+              ],
+            ),
+          );
+        });
   }
 }
