@@ -4,11 +4,11 @@ import 'constants/constants.dart';
 
 class DefaultButton extends StatelessWidget {
   const DefaultButton({
-    Key? key,
+    super.key,
     required this.text,
     required this.size,
     this.press,
-  }) : super(key: key);
+  });
   final String text;
   final Function? press;
   final double size;

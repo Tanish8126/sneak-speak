@@ -5,8 +5,7 @@ import 'constants/constants.dart';
 
 class CustomSurffixIcon extends StatelessWidget {
   const CustomSurffixIcon(
-      {Key? key, required this.svgIcon, required this.color})
-      : super(key: key);
+      {super.key, required this.svgIcon, required this.color});
 
   final String svgIcon;
   final Color color;

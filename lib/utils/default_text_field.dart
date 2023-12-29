@@ -4,7 +4,7 @@ import 'constants/constants.dart';
 
 class DefaultTextField extends StatelessWidget {
   const DefaultTextField(
-      {Key? key,
+      {super.key,
       required this.labeltext,
       required this.hinttext,
       required this.keyboardType,
@@ -17,8 +17,7 @@ class DefaultTextField extends StatelessWidget {
       required this.prefixtext,
       required this.validator,
       required this.prefixicon,
-      required})
-      : super(key: key);
+      required});
 
   final String? labeltext;
   final String? hinttext;
