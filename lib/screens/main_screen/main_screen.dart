@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../utils/constants/constants.dart';
-import '../events_screen/events_screen.dart';
+import '../messages_screen/messages_screen.dart';
 import '../home_screen/home_screen.dart';
 import '../network_screen/network_screen.dart';
 import '../profile_screen/profile_screen.dart';
@@ -24,7 +24,7 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> pages = const [
     HomeScreen(),
     NetworkScreen(),
-    EventsScreen(),
+    MessagesScreen(),
     ProfileScreen()
   ];
 

@@ -1,4 +1,4 @@
-library profilescreen;
+library chatscreen;
 
 export './bindings.dart';
 export './controller.dart';

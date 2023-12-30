@@ -1,1 +1,1 @@
-class OtpScreenState {}
+class ProfileScreenState {}

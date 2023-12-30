@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../utils/constants/constants.dart';
-import '../widget.home/alien_home/alien_home.dart';
-import '../widget.home/native_home/native_part.dart';
+import 'alien_home/alien_home.dart';
+import 'native_home/native_part.dart';
 
 class HomeScreen extends StatelessWidget {
   static String routeName = './home_screen';

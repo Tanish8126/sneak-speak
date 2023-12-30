@@ -2,9 +2,9 @@ import 'package:get/get.dart';
 
 import 'controller.dart';
 
-class ProfileScreenBindings implements Bindings {
+class ChatScreenBindings implements Bindings {
   @override
   void dependencies() {
-    Get.lazyPut(() => ProfileScreenController());
+    Get.lazyPut(() => ChatScreenController());
   }
 }

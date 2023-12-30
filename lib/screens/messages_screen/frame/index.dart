@@ -1,4 +1,4 @@
-library profilescreen;
+library messages;
 
 export './bindings.dart';
 export './controller.dart';

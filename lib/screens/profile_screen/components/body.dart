@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../utils/constants/constants.dart';
-import '../../widget.home/native_home/components/body.dart';
+import '../../home_screen/components/tweet_body.dart';
 import 'info.dart';
 
 class Body extends StatelessWidget {
@@ -41,7 +41,7 @@ class Body extends StatelessWidget {
           ),
           const Info(),
           Divider(color: kWhite.withOpacity(0.4)),
-          const NativeBody(
+          const TweetBody(
               tweet:
                   "In the corridors of Ridgeview College, whispers spread like wildfire. From scandalous love affairs to clandestine alliances, the gossip mill churned ceaselessly. Friends turned foes, secrets unveiled, and reputations shattered. Amidst the chaos, the power of words held sway, forever altering the course of friendships and shaping the college's social landscape.")
         ],

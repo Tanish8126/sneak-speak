@@ -37,6 +37,7 @@ class FeedModel {
       this.parentkey,
       this.lanCode,
       this.childRetwetkey});
+
   toJson() {
     return {
       "userId": userId,
