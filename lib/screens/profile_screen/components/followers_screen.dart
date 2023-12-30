@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sneak_speak/screens/widget.profile/followers/followers.dart';
-import 'package:sneak_speak/screens/widget.profile/following/following.dart';
 
 import '../../../utils/constants/constants.dart';
+import '../../widget.profile/followers/followers.dart';
+import '../../widget.profile/following/following.dart';
 
 class FollowersScreen extends StatelessWidget {
   static String routeName = './followers_screen';

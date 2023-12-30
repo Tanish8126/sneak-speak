@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 
 import '../../../../../utils/constants/constants.dart';
 import '../../../../controller/auth_controller.dart';
-import '../../../../utils/default_button.dart';
 import '../../otp_screen/otp_screen.dart';
 
 class Body extends StatefulWidget {
@@ -34,7 +33,7 @@ class _BodyState extends State<Body> {
           sh02,
           TextFormField(
             style: tsPW(26, FontWeight.bold),
-            textAlign: TextAlign.start,
+            textAlign: TextAlign.center,
             controller: _controller,
             inputFormatters: [
               LengthLimitingTextInputFormatter(10),
@@ -52,10 +51,6 @@ class _BodyState extends State<Body> {
               errorBorder: InputBorder.none,
               focusedErrorBorder: InputBorder.none,
               fillColor: kBlack,
-              errorMaxLines: 2,
-              errorStyle: tsB(12),
-              floatingLabelAlignment: FloatingLabelAlignment.start,
-              floatingLabelBehavior: FloatingLabelBehavior.always,
               prefixIcon: SizedBox(
                 width: getProportionateScreenWidth(70),
                 child: Container(
@@ -69,17 +64,26 @@ class _BodyState extends State<Body> {
             ),
           ),
           sh05,
-          DefaultButton(
-            text: "Continue",
-            press: () {
-              if (_formKey.currentState!.validate()) {
-                _formKey.currentState!.save();
-                //  _authController.getOtp(context);
-                Get.toNamed(OtpScreen.routeName);
-              }
-            },
-            size: 18,
-          ),
+          SizedBox(
+            width: double.infinity,
+            height: getProportionateScreenHeight(65),
+            child: TextButton(
+              style: TextButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5)),
+                foregroundColor: kWhite,
+                backgroundColor: kButton,
+              ),
+              onPressed: () {
+                if (_formKey.currentState!.validate()) {
+                  _formKey.currentState!.save();
+                  _authController.getOtp(context);
+                  Get.toNamed(OtpScreen.routeName);
+                }
+              },
+              child: Text("Continue", style: tsW(18)),
+            ),
+          )
         ]),
       ),
     );

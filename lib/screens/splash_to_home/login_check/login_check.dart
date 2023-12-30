@@ -1,8 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import '../../../utils/constants/constants.dart';
 import '../../main_screen/main_screen.dart';
-import '../phone_auth_screen/phone_auth_screen.dart';
+import '../splash_screen/splash_screen.dart';
 
 class LoginCheck extends StatelessWidget {
   const LoginCheck({super.key});
@@ -10,6 +11,7 @@ class LoginCheck extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return StreamBuilder<User?>(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
@@ -21,7 +23,7 @@ class LoginCheck extends StatelessWidget {
           if (snapshot.hasData) {
             return const MainScreen();
           } else {
-            return const PhoneAuthScreen();
+            return SplashScreen();
           }
         });
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sneak_speak/screens/events_screen/body.dart';
 
 import '../../utils/constants/constants.dart';
+import 'body.dart';
 
 class EventsScreen extends StatelessWidget {
   static String routeName = './events_screen';

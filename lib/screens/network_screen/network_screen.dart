@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sneak_speak/screens/widget.network/alien_network/alien_network.dart';
-import 'package:sneak_speak/screens/widget.network/native_network/native_network.dart';
 
 import '../../utils/constants/constants.dart';
+import '../widget.network/alien_network/alien_network.dart';
+import '../widget.network/native_network/native_network.dart';
 
 class NetworkScreen extends StatelessWidget {
   static String routeName = './network_screen';

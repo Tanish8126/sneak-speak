@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'global.dart';
-import 'screens/splash_to_home/splash_screen/splash_screen.dart';
+import 'screens/splash_to_home/login_check/login_check.dart';
 import 'utils/routes.dart';
 import 'utils/theme.dart';
 
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: 'Sneak Peak',
             theme: theme(),
-            initialRoute: SplashScreen.routeName,
+            initialRoute: LoginCheck.routeName,
             routes: routes,
           );
         });

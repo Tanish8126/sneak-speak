@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:sneak_speak/screens/profile_screen/components/editprofile_screen.dart';
 
 import '../../../utils/constants/constants.dart';
+import 'editprofile_screen.dart';
 import 'followers_screen.dart';
 
 class Info extends StatelessWidget {

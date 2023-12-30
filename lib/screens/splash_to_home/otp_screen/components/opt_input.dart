@@ -7,7 +7,6 @@ import '../../../../../controller/auth_controller.dart';
 import '../../../../../utils/constants/constants.dart';
 import '../../../../../utils/snackbar.dart';
 import '../../../../utils/default_button.dart';
-import '../../../main_screen/main_screen.dart';
 import 'resend_otp.dart';
 
 class OtpInput extends StatelessWidget {
@@ -35,7 +34,9 @@ class OtpInput extends StatelessWidget {
                 style: tsWW(18, FontWeight.w700),
               ),
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.back();
+                  },
                   icon: SvgPicture.asset("assets/icons/pen.svg"))
             ],
           ),
@@ -66,8 +67,7 @@ class OtpInput extends StatelessWidget {
             press: () {
               if (_formKey.currentState!.validate()) {
                 authController.otp.value = _pinPutController.text;
-                //   authController.verifyOTP();
-                Get.toNamed(MainScreen.routeName);
+                authController.verifyOTP();
               } else {
                 showSnackBar(context, "Enter 6-Digit Otp");
               }

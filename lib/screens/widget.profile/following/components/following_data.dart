@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:sneak_speak/screens/profile_screen/profile_screen.dart';
 
 import '../../../../utils/constants/constants.dart';
+import '../../../profile_screen/profile_screen.dart';
 
 class FollowingData extends StatelessWidget {
   const FollowingData({super.key});

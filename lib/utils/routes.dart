@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:sneak_speak/screens/profile_screen/components/editprofile_screen.dart';
-import 'package:sneak_speak/screens/profile_screen/components/followers_screen.dart';
-import 'package:sneak_speak/screens/widget.profile/followers/followers.dart';
-import 'package:sneak_speak/screens/widget.profile/following/following.dart';
 
-import '../screens/complete_profile/complete_profile.dart';
 import '../screens/events_screen/events_screen.dart';
 import '../screens/home_screen/home_screen.dart';
 import '../screens/main_screen/main_screen.dart';
 import '../screens/message_screen/message_screen.dart';
 import '../screens/network_screen/network_screen.dart';
+import '../screens/profile_screen/components/editprofile_screen.dart';
+import '../screens/profile_screen/components/followers_screen.dart';
 import '../screens/profile_screen/profile_screen.dart';
 import '../screens/splash_to_home/login_check/login_check.dart';
 import '../screens/splash_to_home/otp_screen/otp_screen.dart';
@@ -18,6 +15,8 @@ import '../screens/splash_to_home/signup_form_screen/signup_form_screen.dart';
 import '../screens/splash_to_home/splash_screen/splash_screen.dart';
 import '../screens/widget.home/alien_home/alien_home.dart';
 import '../screens/widget.home/native_home/native_part.dart';
+import '../screens/widget.profile/followers/followers.dart';
+import '../screens/widget.profile/following/following.dart';
 
 // We use name route
 // All our routes will be available here
@@ -39,5 +38,4 @@ final Map<String, WidgetBuilder> routes = {
   FollowersScreen.routeName: (context) => const FollowersScreen(),
   Followers.roteName: (context) => const Followers(),
   Following.roteName: (context) => const Following(),
-  CompleteProfile.routeName: (context) => const CompleteProfile(),
 };
