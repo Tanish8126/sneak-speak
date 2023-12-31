@@ -1,42 +1,31 @@
 // ignore_for_file: prefer_null_aware_operators
 
-import 'package:flutter/foundation.dart';
-
 import 'user_model.dart';
 
 class FeedModel {
   String? key;
   String? parentkey;
-  String? childRetwetkey;
-  String? description;
+  late String description;
   late String userId;
   int? likeCount;
   List<String>? likeList;
   int? commentCount;
-  int? retweetCount;
-  late String createdAt;
+  dynamic createdAt;
   String? imagePath;
-  List<String>? tags;
-  List<String?>? replyTweetKeyList;
-  String?
-      lanCode; //Saving the language of the tweet so to not translate to check which language
   UserModel? user;
-  FeedModel(
-      {this.key,
-      this.description,
-      required this.userId,
-      this.likeCount,
-      this.commentCount,
-      this.retweetCount,
-      required this.createdAt,
-      this.imagePath,
-      this.likeList,
-      this.tags,
-      this.user,
-      this.replyTweetKeyList,
-      this.parentkey,
-      this.lanCode,
-      this.childRetwetkey});
+
+  FeedModel({
+    this.key,
+    required this.description,
+    required this.userId,
+    this.likeCount,
+    this.commentCount,
+    required this.createdAt,
+    this.imagePath,
+    this.likeList,
+    this.user,
+    this.parentkey,
+  });
 
   toJson() {
     return {
@@ -44,46 +33,45 @@ class FeedModel {
       "description": description,
       "likeCount": likeCount,
       "commentCount": commentCount ?? 0,
-      "retweetCount": retweetCount ?? 0,
       "createdAt": createdAt,
       "imagePath": imagePath,
       "likeList": likeList,
-      "tags": tags,
-      "replyTweetKeyList": replyTweetKeyList,
       "user": user == null ? null : user!.toJson(),
       "parentkey": parentkey,
-      "lanCode": lanCode,
-      "childRetwetkey": childRetwetkey
     };
   }
 
-  FeedModel.fromJson(Map<dynamic, dynamic> map) {
+  Map<String, dynamic> toMap() {
+    return {
+      "userId": userId,
+      "description": description,
+      "likeCount": likeCount,
+      "commentCount": commentCount ?? 0,
+      "createdAt": createdAt,
+      "imagePath": imagePath,
+      "likeList": likeList,
+      "user": user == null ? null : user!.toJson(),
+      "parentkey": parentkey,
+    };
+  }
+
+  FeedModel.fromMap(Map<dynamic, dynamic> map) {
     key = map['key'];
     description = map['description'];
     userId = map['userId'];
     likeCount = map['likeCount'] ?? 0;
     commentCount = map['commentCount'];
-    retweetCount = map["retweetCount"] ?? 0;
     imagePath = map['imagePath'];
     createdAt = map['createdAt'];
     imagePath = map['imagePath'];
-    lanCode = map['lanCode'];
     user = UserModel.fromJson(map['user']);
     parentkey = map['parentkey'];
-    childRetwetkey = map['childRetwetkey'];
-    if (map['tags'] != null) {
-      tags = <String>[];
-      map['tags'].forEach((value) {
-        tags!.add(value);
-      });
-    }
+
     if (map["likeList"] != null) {
       likeList = <String>[];
-
       final list = map['likeList'];
 
       /// In new tweet db schema likeList is stored as a List<String>()
-      ///
       if (list is List) {
         map['likeList'].forEach((value) {
           if (value is String) {
@@ -106,41 +94,17 @@ class FeedModel {
       likeList = [];
       likeCount = 0;
     }
-    if (map['replyTweetKeyList'] != null) {
-      map['replyTweetKeyList'].forEach((value) {
-        replyTweetKeyList = <String>[];
-        map['replyTweetKeyList'].forEach((value) {
-          replyTweetKeyList!.add(value);
-        });
-      });
-      commentCount = replyTweetKeyList!.length;
-    } else {
-      replyTweetKeyList = [];
-      commentCount = 0;
-    }
   }
 
-  bool get isValidTweet {
-    bool isValid = false;
-    if (user != null && user!.userName != null && user!.userName!.isNotEmpty) {
-      isValid = true;
-    } else {
-      if (kDebugMode) {
-        print("Invalid Tweet found. Id:- $key");
-      }
-    }
-    return isValid;
-  }
-
-  /// get tweet key to retweet.
-  ///
-  /// If tweet [TweetType] is [TweetType.Retweet] and its description is null
-  /// then its retweeted child tweet will be shared.
-  String get getTweetKeyToRetweet {
-    if (description == null && imagePath == null && childRetwetkey != null) {
-      return childRetwetkey!;
-    } else {
-      return key!;
-    }
-  }
+  // bool get isValidTweet {
+  //   bool isValid = false;
+  //   if (user != null && user!.userName != null && user!.userName!.isNotEmpty) {
+  //     isValid = true;
+  //   } else {
+  //     if (kDebugMode) {
+  //       print("Invalid Tweet found. Id:- $key");
+  //     }
+  //   }
+  //   return isValid;
+  // }
 }

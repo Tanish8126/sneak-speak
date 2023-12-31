@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:sneak_speak/resources/post_data_methods.dart';
 
+import '../../../resources/post_data_methods.dart';
 import '../../../utils/constants/constants.dart';
 
 class LikeTweet extends StatelessWidget {

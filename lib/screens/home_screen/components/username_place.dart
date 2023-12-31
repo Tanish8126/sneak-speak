@@ -9,14 +9,17 @@ import '../../../utils/constants/constants.dart';
 class UserNamePlace extends StatelessWidget {
   const UserNamePlace({
     super.key,
+    required this.userName,
+    required this.place,
   });
+  final String userName, place;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          "Firefighter",
+          userName,
           style: tsWW(15, FontWeight.w700),
         ),
         sw07,
@@ -28,7 +31,7 @@ class UserNamePlace extends StatelessWidget {
               color: const Color(0xFFD9FFBB),
             ),
             label: Text(
-              "Nmims",
+              place,
               style: tsCommonW(15, FontWeight.w700, const Color(0xFFD9FFBB)),
             )),
       ],

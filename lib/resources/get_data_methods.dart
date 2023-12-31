@@ -14,23 +14,11 @@ class GetDataMethods {
     return null;
   }
 
-  // Get saved address
+  //===============TWEET RELATED===============//
 
-  //  Get past Orders
-  // Stream<List<OrderModel>> streamMyOrder(String myId) {
-  //   return _userRef
-  //       .collection("orderCollection")
-  //       .where('user.docId', isEqualTo: myId)
-  //       .snapshots()
-  //       .map((event) =>
-  //           event.docs.map((e) => OrderModel.fromJson(e.data())).toList());
-  // }
+  //Get Tweet
 
-  //===============STORE RELATED===============//
+  //Get
 
-  //Get Promotion Banner
-
-  //Get store info
-
-  // Get products from store
+  //Get
 }

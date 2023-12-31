@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../screens/create_tweet_screen/create_tweet_screen.dart';
 import '../screens/messages_screen/messages_screen.dart';
 import '../screens/home_screen/home_screen.dart';
 import '../screens/main_screen/main_screen.dart';
@@ -28,6 +29,7 @@ final Map<String, WidgetBuilder> routes = {
   SignupFormScreen.routeName: (context) => const SignupFormScreen(),
   MainScreen.routeName: (context) => const MainScreen(),
   HomeScreen.routeName: (context) => const HomeScreen(),
+  CreateTweetScreen.routeName: (context) => const CreateTweetScreen(),
   AlienHome.routeName: (context) => const AlienHome(),
   NativeHome.roteName: (context) => const NativeHome(),
   NetworkScreen.routeName: (context) => const NetworkScreen(),

@@ -42,8 +42,11 @@ class Body extends StatelessWidget {
           const Info(),
           Divider(color: kWhite.withOpacity(0.4)),
           const TweetBody(
-              tweet:
-                  "In the corridors of Ridgeview College, whispers spread like wildfire. From scandalous love affairs to clandestine alliances, the gossip mill churned ceaselessly. Friends turned foes, secrets unveiled, and reputations shattered. Amidst the chaos, the power of words held sway, forever altering the course of friendships and shaping the college's social landscape.")
+            tweet:
+                "In the corridors of Ridgeview College, whispers spread like wildfire. From scandalous love affairs to clandestine alliances, the gossip mill churned ceaselessly. Friends turned foes, secrets unveiled, and reputations shattered. Amidst the chaos, the power of words held sway, forever altering the course of friendships and shaping the college's social landscape.",
+            userName: 'FireFighter',
+            place: 'Nims',
+          )
         ],
       ),
     );

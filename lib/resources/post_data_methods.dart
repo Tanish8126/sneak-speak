@@ -1,8 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_database/firebase_database.dart';
-import 'package:sneak_speak/models/feed_model.dart';
+import 'package:flutter/material.dart';
 
+import '../models/feed_model.dart';
 import '../models/phone_data_model.dart';
+import '../utils/snackbar.dart';
 
 class PostDataMethods {
   final _userRef = FirebaseFirestore.instance;
@@ -19,7 +20,25 @@ class PostDataMethods {
     await _userRef.collection('userData').doc(uid).set(userdata.toMap());
   }
 
-  //Save Mobile Number to Firebase
+  //================TWEET RELATED=============//
+
+  //Save Tweet to Firebase
+
+  Future<String> saveTweet(BuildContext context, String tweet) async {
+    //  final user = Provider.of<UserProvider>(context, listen: false).user;
+    String channelId = '';
+    try {
+      FeedModel feedModel = FeedModel(
+          userId: '12345', createdAt: DateTime.now(), description: tweet);
+
+      _userRef.collection('tweet').doc().set(feedModel.toMap());
+    } on FirebaseException catch (e) {
+      showSnackBar(context, e.message!);
+    }
+    return channelId;
+  }
+
+  //Add Like To Tweet
   void addLikeToTweet(FeedModel tweet, String userId) async {
     // FirebaseFirestore.instance
     //     .collection('tweet')
@@ -27,11 +46,25 @@ class PostDataMethods {
     //     .collection('likeList')
     //     .doc()
     //     .set(tweet.likeCount);
-    FirebaseDatabase.instance
-        .ref('')
-        .child('tweet')
-        .child(tweet.key!)
-        .child('likeList')
-        .set(tweet.likeList);
+  }
+
+  //Add Bookmark to Tweet
+  void addBookmark(FeedModel tweet, String userId) async {
+    // FirebaseFirestore.instance
+    //     .collection('tweet')
+    //     .doc(tweet.key!)
+    //     .collection('likeList')
+    //     .doc()
+    //     .set(tweet.likeCount);
+  }
+
+  //Add Comment to Tweet
+  void commentToTweet(FeedModel tweet, String userId) async {
+    // FirebaseFirestore.instance
+    //     .collection('tweet')
+    //     .doc(tweet.key!)
+    //     .collection('likeList')
+    //     .doc()
+    //     .set(tweet.likeCount);
   }
 }

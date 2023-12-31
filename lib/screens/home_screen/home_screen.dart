@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 import '../../utils/constants/constants.dart';
+import '../create_tweet_screen/create_tweet_screen.dart';
 import 'alien_home/alien_home.dart';
 import 'native_home/native_part.dart';
 
@@ -31,7 +33,9 @@ class HomeScreen extends StatelessWidget {
                 ]),
           ),
           floatingActionButton: FloatingActionButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed(CreateTweetScreen.routeName);
+            },
             backgroundColor: ktrans,
             child: SvgPicture.asset(
               "assets/icons/floating.svg",
