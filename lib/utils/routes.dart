@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sneak_speak/screens/group_info/group_info.dart';
 
 import '../screens/create_tweet_screen/create_tweet_screen.dart';
 import '../screens/messages_screen/messages_screen.dart';
@@ -33,6 +34,7 @@ final Map<String, WidgetBuilder> routes = {
   AlienHome.routeName: (context) => const AlienHome(),
   NativeHome.roteName: (context) => const NativeHome(),
   NetworkScreen.routeName: (context) => const NetworkScreen(),
+  GroupInfo.routeName: (context) => const GroupInfo(),
   MessagesScreen.routeName: (context) => const MessagesScreen(),
   ChatScreen.routeName: (context) => const ChatScreen(),
   ProfileScreen.routeName: (context) => const ProfileScreen(),
