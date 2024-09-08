@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sneak_speak/utils/constants/constants.dart';
 
 import 'components/body.dart';
 
@@ -11,7 +12,15 @@ class GroupInfo extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
             appBar: AppBar(
-              title: const Text("Group Info"),
+              leading: const Icon(
+                Icons.arrow_back_ios,
+                color: kWhite,
+                size: 16,
+              ),
+              title: Text(
+                "Group Info",
+                style: tsWW(14, FontWeight.w700),
+              ),
             ),
             body: const Body()));
   }

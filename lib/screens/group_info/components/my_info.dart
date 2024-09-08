@@ -21,12 +21,12 @@ class MyInfo extends StatelessWidget {
         sw04,
         Text(
           "Guman",
-          style: tsCommonW(14, FontWeight.w600, const Color(0xffFF9898)),
+          style: tsCommonW(14, FontWeight.w600, kPink),
         ),
         const Spacer(),
         Text(
           "Exit",
-          style: tsCommonW(14, FontWeight.w600, const Color(0xffFF9898)),
+          style: tsCommonW(14, FontWeight.w600, kPink),
         ),
         sw01,
         SvgPicture.asset("assets/icons/logout.svg")

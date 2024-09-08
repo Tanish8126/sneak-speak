@@ -24,7 +24,7 @@ class FollowingData extends StatelessWidget {
           sw04,
           Text(
             "Guman",
-            style: tsCommonW(16, FontWeight.w600, kBlue),
+            style: tsCommonW(16, FontWeight.w600, kPink),
           )
         ],
       ),

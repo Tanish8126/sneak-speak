@@ -11,18 +11,32 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: pda(0.02),
-      child: Column(
-        children: [
-          const GroupData(),
-          sh05,
-          const MemberNumbers(),
-          sh04,
-          const MyInfo(),
-          sh02,
-          const MemberInfo()
-        ],
+    return SingleChildScrollView(
+      child: Padding(
+        padding: pda(0.02),
+        child: Column(
+          children: [
+            const GroupData(),
+            sh05,
+            const MemberNumbers(),
+            sh04,
+            const MyInfo(),
+            sh02,
+            const MemberInfo(membername: "Guman"),
+            sh02,
+            const MemberInfo(membername: "Guman"),
+            sh02,
+            const MemberInfo(membername: "Guman"),
+            sh02,
+            const MemberInfo(membername: "Guman"),
+            sh02,
+            const MemberInfo(membername: "Guman"),
+            sh02,
+            const MemberInfo(membername: "Guman"),
+            sh02,
+            const MemberInfo(membername: "Guman"),
+          ],
+        ),
       ),
     );
   }

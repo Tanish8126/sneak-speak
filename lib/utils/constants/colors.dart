@@ -5,7 +5,7 @@ const kSecondary = Color(0XFFD9D9D9);
 const kInactive = Color(0XFF131313);
 const kButton = Color(0XFF4B4B4B);
 const kNav = Color(0XFF383838);
-const kPink = Color(0XFFFF7373);
+const kPink = Color(0xffFF9898);
 const kGreen = Color(0XFFA6FF98);
 
 const ktrans = Colors.transparent;
