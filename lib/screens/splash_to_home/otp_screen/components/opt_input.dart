@@ -50,7 +50,6 @@ class OtpInput extends StatelessWidget {
             defaultPinTheme: defaultPinTheme,
             focusedPinTheme: defaultPinTheme,
             errorPinTheme: defaultPinTheme,
-            androidSmsAutofillMethod: AndroidSmsAutofillMethod.smsRetrieverApi,
             controller: _pinPutController,
             pinContentAlignment: Alignment.center,
             pinAnimationType: PinAnimationType.fade,
